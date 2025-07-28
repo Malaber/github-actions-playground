@@ -8,14 +8,14 @@ jobs:
       - name: Create file
         run: |
           echo "Hallo Welt Ich bin ein Test!" > helloworld.txt
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Hello_World
           path: helloworld.txt
   upload_image:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: Hello_World
       - run: |
